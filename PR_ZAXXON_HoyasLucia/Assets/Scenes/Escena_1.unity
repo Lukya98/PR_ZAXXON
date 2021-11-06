@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 650078194}
   - component: {fileID: 650078195}
+  - component: {fileID: 650078196}
   m_Layer: 0
   m_Name: Nave
   m_TagString: Untagged
@@ -218,6 +219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 47883963}
+  - {fileID: 1363714289}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -235,6 +237,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   nave: {fileID: 650078193}
+  iniciojuego: {fileID: 978975257}
+--- !u!114 &650078196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650078193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38210d70e0789cf42972f177b506cec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bala: {fileID: 7270036362393962643, guid: 72d4be19ed42f0342a8a1571295d5181, type: 3}
+  pistola: {fileID: 1363714289}
 --- !u!1 &978975256
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JuegoSpeed: 0
+  alive: 0
+  lives: 0
 --- !u!4 &978975258
 Transform:
   m_ObjectHideFlags: 0
@@ -290,7 +309,7 @@ GameObject:
   - component: {fileID: 1079740808}
   - component: {fileID: 1079740809}
   m_Layer: 0
-  m_Name: Prefabempty
+  m_Name: PrefabAsteroides
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +347,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  columna: {fileID: 7656451687001822149, guid: 34b3f4501f5dae248be94502109cb353, type: 3}
+  meteorito: {fileID: 7656451687001822149, guid: 34b3f4501f5dae248be94502109cb353, type: 3}
   instantiatePos: {fileID: 1079740808}
   distancia: 0
 --- !u!1 &1288214288
@@ -426,6 +445,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1363714288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1363714289}
+  m_Layer: 0
+  m_Name: pistola
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1363714289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363714288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.011, y: -0.326, z: 1.654}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 650078194}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1652280860
 GameObject:

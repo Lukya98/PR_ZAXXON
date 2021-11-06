@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &8235738855820829164
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656451687001822149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4199401309831131938, guid: ee55469b95784a14884980ef407e6f48, type: 3}
 --- !u!114 &-1763718289764854250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,6 +24,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4d4a508718bf4a478def162bb31b33c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iniciojuego: {fileID: 0}
+--- !u!114 &-1238402724837761244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656451687001822149}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d4670e97f17844cbee1c2b5e5aae58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6601274581239438528
@@ -90,6 +117,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ee55469b95784a14884980ef407e6f48, type: 3}
       propertyPath: m_Name
       value: asteroide Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee55469b95784a14884980ef407e6f48, type: 3}
+      propertyPath: m_TagString
+      value: Asteroide
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee55469b95784a14884980ef407e6f48, type: 3}
