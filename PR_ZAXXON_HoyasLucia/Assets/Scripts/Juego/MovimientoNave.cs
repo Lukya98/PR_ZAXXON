@@ -7,6 +7,7 @@ public class MovimientoNave : MonoBehaviour
     [SerializeField] float speed;
     public GameObject nave;
     public InitGame iniciojuego;
+   // AudioSource audiosource;
 
     
     
@@ -19,7 +20,7 @@ public class MovimientoNave : MonoBehaviour
     void Start()
     {
         speed = 8;
-
+        //audiosource = GetComponent<AudioSource>();
         
     }
 
@@ -73,5 +74,9 @@ public class MovimientoNave : MonoBehaviour
         speed = 0;
         iniciojuego.alive = false;
     }
+   /*ublic void DispararSound()
+    {
+        audiosource.Play();
+    }*/
 
 }

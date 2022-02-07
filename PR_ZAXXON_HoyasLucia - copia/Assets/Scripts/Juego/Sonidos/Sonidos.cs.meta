@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c143a2db0dafec8448c4476f89fc64b1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - disparosound: {fileID: 8300000, guid: 36dbcea775ddb15499e86a2a4b8724fa, type: 3}
+  - chichos: {fileID: 8300000, guid: 287997a76d37f9c44891f3bf63b7d888, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -6,6 +6,7 @@ public class InstanciadorBala : MonoBehaviour
 {
     public GameObject bala;
     public Transform pistola;
+    AudioSource audiosource;
 
     
 
@@ -13,7 +14,7 @@ public class InstanciadorBala : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,9 +24,9 @@ public class InstanciadorBala : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-
+            
            Instantiate(bala,transform.position,bala.transform.rotation);
-           
+           // audiosource.Play();
         }
         
     }
