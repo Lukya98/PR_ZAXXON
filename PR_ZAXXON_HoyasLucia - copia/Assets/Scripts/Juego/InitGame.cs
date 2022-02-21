@@ -14,10 +14,15 @@ public class InitGame : MonoBehaviour
     [SerializeField] Image lifesImage;
     [SerializeField] Sprite[] lifesSprite;
 
+    //particulas
+    [SerializeField] GameObject particle;
+    [SerializeField] Transform particleinstan;
+    bool puede_explotar;
+
     //UI statica que como lo ponga me destruye el juegos
-    public int score;
-    
-    
+    public static int score;
+    public int score_adapt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,21 +61,24 @@ public class InitGame : MonoBehaviour
             GameObject.Find("cristalmesh").GetComponent<MeshRenderer>().enabled = false;
             GameObject.Find("CanvasGameOver").GetComponent<Canvas>().enabled = true;
             GameObject.Find("EventSystem").GetComponent<EventSystem>().enabled = true;
+            
+            
+            if (puede_explotar)
+            {
+                Instantiate(particle, particleinstan);
+                puede_explotar = false;
+            }
 
         }
         if (alive == true) // si nave viva
         {
             GameObject.Find("CanvasGameOver").GetComponent<Canvas>().enabled = false;
             GameObject.Find("EventSystem").GetComponent<EventSystem>().enabled = false;
+            puede_explotar = true;
         }
+        score = score_adapt;
+        
     }
   
-    /*void VidasUi()
-    {
-        if (lives == 1)
-        {
-            lifesSprite[3];
-        }
-    }*/
 
 }

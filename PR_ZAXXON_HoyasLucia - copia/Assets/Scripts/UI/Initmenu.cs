@@ -7,27 +7,43 @@ using UnityEngine.SceneManagement;
 public class Initmenu : MonoBehaviour
 {
     //[SerializeField] Text volumenText;
-   // float volumen;
-   // [SerializeField] Slider mySlider;
-
+    // float volumen;
+    // [SerializeField] Slider mySlider;
+    InitGame initgame;
     [SerializeField] Image lifesImage;
     [SerializeField] Sprite[] lifesSprite;
+
+
+    //Textos
+    [SerializeField] Text scoretext;
+
+    [SerializeField] Text finalscoretext;
     // Start is called before the first frame update
     void Start()
     {
-      // volumenText.text = "Volumen:" + mySlider.value;
-     //  int lifes = InitGame.lives;
-      // lifesImage.sprite = lifesSprite[lifes];
+        // volumenText.text = "Volumen:" + mySlider.value;
+        initgame = GameObject.Find("InitGame").GetComponent<InitGame>();
+
+        
 
 
     }
 
 
-
     // Update is called once per frame
     void Update()
     {
-        
+        int lifes = initgame.lives;
+        lifesImage.sprite = lifesSprite[lifes];
+        if (lifes<= 0)
+        {
+            GameObject.Find("CanvasHUD").GetComponent<Canvas>().enabled = false;
+        }
+
+        //Texto score
+        scoretext.text = ("Score: ") + initgame.score_adapt;
+
+        finalscoretext.text = ("Final Score: ") + initgame.score_adapt;
     }
     
     

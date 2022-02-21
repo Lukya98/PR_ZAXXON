@@ -20,7 +20,7 @@ public class Puntuacion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        puntuacion.text = "score" + iniciojuego.score;
+        puntuacion.text = "score" + iniciojuego.score_adapt;
 
     }
 }

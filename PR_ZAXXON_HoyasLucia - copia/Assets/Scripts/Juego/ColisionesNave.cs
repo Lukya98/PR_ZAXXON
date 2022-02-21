@@ -5,12 +5,13 @@ using UnityEngine;
 public class ColisionesNave : MonoBehaviour
 {
     InitGame iniciojuego;
+    SonidoChoquenave choquenave;
 
     // Start is called before the first frame update
     void Start()
     {
         iniciojuego = GameObject.Find("InitGame").GetComponent<InitGame>();
-
+        choquenave = GameObject.Find("Choquenave Sound").GetComponent<SonidoChoquenave>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,11 @@ public class ColisionesNave : MonoBehaviour
         {
             iniciojuego.lives--;
             print("vidas: "+ iniciojuego.lives);
+            if (iniciojuego.lives > 0)
+            {
+                choquenave.puede_chocar = true;
+            }
+            
         }
 
     }
